@@ -1,0 +1,74 @@
+.body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(to top, rgba(10, 10, 10, 0.4), rgba(10, 10, 10, 0.4)),
+    url('../../images/background.png') center no-repeat;
+}
+
+.about {
+  margin: 2.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 2px;
+
+  color: white;
+
+  .description {
+    font-size: 1.1rem;
+    line-height: 1.4rem;
+  }
+}
+
+.competences {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: rgba(10, 10, 10, 0.5);
+  border-top: black solid 2px;
+
+  .table {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+
+    .list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+
+      .name {
+        text-align: right;
+        color: #f3f6f4;
+      }
+
+      .points {
+        display: flex;
+        gap: 0.25rem;
+
+        span {
+          display: flex;
+          gap: 0.25rem;
+        }
+
+        .full {
+          color: #e06666;
+        }
+
+        .empty {
+          color: rgba(10, 10, 10, 0.4);
+        }
+      }
+    }
+  }
+}
+
+.title {
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-align: center;
+  color: #9fc5e8;
+}

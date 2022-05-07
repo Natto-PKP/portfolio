@@ -1,0 +1,28 @@
+.aside {
+  padding-top: 6rem;
+
+  .navigator {
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+
+    a {
+      display: flex;
+      gap: 0.4rem;
+      padding: 0.6rem 0.8rem;
+      border: 1px solid #e06666;
+      border-radius: 4px;
+      background-color: #e06666;
+      color: black;
+      text-decoration: none;
+
+      transition: 0.2s ease-out;
+
+      &.active,
+      &:hover {
+        background-color: transparent;
+        color: #e06666;
+      }
+    }
+  }
+}
