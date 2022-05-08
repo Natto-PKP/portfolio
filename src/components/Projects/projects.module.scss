@@ -3,5 +3,71 @@
   display: flex;
   flex-direction: column;
   background: linear-gradient(to top, rgba(10, 10, 10, 0.4), rgba(10, 10, 10, 0.4)),
-    url('../../images/background.png') center no-repeat;
+    url('../../images/background.png') center fixed no-repeat;
+}
+
+.projects {
+  padding: 3rem 1rem;
+
+  .list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+
+    .project {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      padding: 0.4rem;
+      background-color: rgba(10, 10, 10, 0.5);
+      border-radius: 2px;
+
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 0.6rem;
+
+        .name {
+          font-size: 1.4rem;
+          color: #9fc5e8;
+        }
+
+        .buttons {
+          display: flex;
+          gap: 1rem;
+          font-size: 1.4rem;
+
+          .button {
+            color: #f3f6f4;
+          }
+        }
+      }
+
+      .description {
+        font-size: 0.9rem;
+        color: rgb(180, 180, 180);
+      }
+
+      .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.2rem;
+
+        .tag__icon {
+          width: 1.5rem;
+        }
+
+        .tag__name {
+          display: none;
+        }
+      }
+
+      .date {
+        text-align: right;
+        font-size: 0.7rem;
+        color: rgb(100, 100, 100);
+      }
+    }
+  }
 }
