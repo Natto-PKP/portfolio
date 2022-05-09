@@ -3,10 +3,6 @@ import { faGithub, faNpm } from '@fortawesome/free-brands-svg-icons';
 
 import type { ReactElement } from 'react';
 
-import Footer from '../Footer/footer.component';
-import Header from '../Header/header.component';
-import Nav from '../Nav/nav.component';
-
 import styles from './projects.module.scss';
 
 import TypescriptIcon from '../../images/icons/typescript.svg';
@@ -74,60 +70,50 @@ const projects = [
 
 export default function Projects(): ReactElement {
   return (
-    <>
-      <Header />
+    <section className={styles.projects}>
+      <ul className={styles.list}>
+        {projects.map((project) => {
+          const currentTags = tags.filter((tag) => {
+            const exist = project.tags.some((name) => tag.name.toLowerCase() === name);
+            return exist;
+          });
 
-      <main className={styles.body}>
-        <Nav />
+          return (
+            <li className={styles.project}>
+              <header className={styles.header}>
+                <h2 className={styles.name}>{project.name}</h2>
 
-        <section className={styles.projects}>
-          <ul className={styles.list}>
-            {projects.map((project) => {
-              const currentTags = tags.filter((tag) => {
-                const exist = project.tags.some((name) => tag.name.toLowerCase() === name);
-                return exist;
-              });
+                <div className={styles.buttons}>
+                  {project.npm && (
+                  <a className={styles.button} target="_blank" href={project.npm} rel="noreferrer">
+                    <FontAwesomeIcon icon={faNpm} />
+                  </a>
+                  )}
 
-              return (
-                <li className={styles.project}>
-                  <header className={styles.header}>
-                    <h2 className={styles.name}>{project.name}</h2>
+                  {project.git && (
+                  <a className={styles.button} target="_blank" href={project.git} rel="noreferrer">
+                    <FontAwesomeIcon icon={faGithub} />
+                  </a>
+                  )}
+                </div>
+              </header>
 
-                    <div className={styles.buttons}>
-                      {project.npm && (
-                      <a className={styles.button} target="_blank" href={project.npm} rel="noreferrer">
-                        <FontAwesomeIcon icon={faNpm} />
-                      </a>
-                      )}
+              <p className={styles.description}>{project.description}</p>
 
-                      {project.git && (
-                      <a className={styles.button} target="_blank" href={project.git} rel="noreferrer">
-                        <FontAwesomeIcon icon={faGithub} />
-                      </a>
-                      )}
-                    </div>
-                  </header>
+              <ul className={styles.tags}>
+                {currentTags.map((tag) => (
+                  <li className={styles.tag}>
+                    <img className={styles.tag__icon} src={tag.icon} alt={tag.name} />
+                    <span className={styles.tag__name}>{tag.name}</span>
+                  </li>
+                ))}
+              </ul>
 
-                  <p className={styles.description}>{project.description}</p>
-
-                  <ul className={styles.tags}>
-                    {currentTags.map((tag) => (
-                      <li className={styles.tag}>
-                        <img className={styles.tag__icon} src={tag.icon} alt={tag.name} />
-                        <span className={styles.tag__name}>{tag.name}</span>
-                      </li>
-                    ))}
-                  </ul>
-
-                  <span className={styles.date}>{`${project.start} - ${project.end}`}</span>
-                </li>
-              );
-            })}
-          </ul>
-        </section>
-      </main>
-
-      <Footer />
-    </>
+              <span className={styles.date}>{`${project.start} - ${project.end}`}</span>
+            </li>
+          );
+        })}
+      </ul>
+    </section>
   );
 }

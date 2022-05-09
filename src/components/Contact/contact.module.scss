@@ -1,0 +1,26 @@
+.contact {
+  padding: 4rem 1rem;
+
+  .list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+
+    .item {
+      .link {
+        display: flex;
+        gap: 0.4rem;
+        align-items: center;
+        font-size: 1.6rem;
+        color: #e06666;
+        text-decoration: none;
+
+        .content {
+          font-size: 1.2rem;
+          color: #f3f6f4;
+        }
+      }
+    }
+  }
+}

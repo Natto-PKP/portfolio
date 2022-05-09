@@ -1,4 +1,4 @@
-import { Link, useLocation } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAddressBook, faDiagramProject } from '@fortawesome/free-solid-svg-icons';
 
@@ -12,14 +12,14 @@ export default function Nav(): ReactElement {
   return (
     <aside className={styles.aside}>
       <nav className={styles.navigator}>
-        <Link className={pathname === '/projects' ? 'active' : undefined} to="/projects">
+        <NavLink className={pathname === '/projects' ? 'active' : undefined} to="/projects">
           <FontAwesomeIcon icon={faDiagramProject} />
           Projets
-        </Link>
-        <Link className={pathname === '/contact' ? 'active' : undefined} to="/contact">
+        </NavLink>
+        <NavLink className={pathname === '/contact' ? 'active' : undefined} to="/contact">
           <FontAwesomeIcon icon={faAddressBook} />
           Contact
-        </Link>
+        </NavLink>
       </nav>
     </aside>
   );

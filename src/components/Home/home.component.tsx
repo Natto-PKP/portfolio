@@ -3,10 +3,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import type { ReactElement } from 'react';
 
-import Header from '../Header/header.component';
-import Nav from '../Nav/nav.component';
-import Footer from '../Footer/footer.component';
-
 import styles from './home.module.scss';
 
 const competences = [
@@ -26,51 +22,43 @@ const competences = [
 export default function Home(): ReactElement {
   return (
     <>
-      <Header />
+      <section className={styles.about}>
+        <h2 className={styles.title}>Wilfried Mainvielle</h2>
 
-      <main className={styles.body}>
-        <Nav />
+        <p className={styles.description}>
+          Nouveau développeur web spécialisé dans les technologies Node.js,
+          je porte un grand intérêt à la propreté, la clareté et l&apos;optimisation
+          de mes projets. J&apos;aime apprendre de nouvelles technos et nouvelles
+          façons de faire.
+        </p>
+      </section>
 
-        <section className={styles.about}>
-          <h2 className={styles.title}>Wilfried Mainvielle</h2>
+      <section className={styles.competences}>
+        <h2 className={styles.title}>Compétences</h2>
 
-          <p className={styles.description}>
-            Nouveau développeur web spécialisé dans les technologies Node.js,
-            je porte un grand intérêt à la propreté, la clareté et l&apos;optimisation
-            de mes projets. J&apos;aime apprendre de nouvelles technos et nouvelles
-            façons de faire.
-          </p>
-        </section>
+        <div className={styles.table}>
+          <ul className={styles.list}>
+            {competences.map(({ name }) => <li className={styles.name}>{name}</li>)}
+          </ul>
 
-        <section className={styles.competences}>
-          <h2 className={styles.title}>Compétences</h2>
+          <ul className={styles.list}>
+            {competences.map(({ points }) => (
+              <li className={styles.points}>
+                <span className={styles.full}>
+                  {Array.from({ length: points }).map(() => <FontAwesomeIcon icon={faSquare} />)}
+                </span>
 
-          <div className={styles.table}>
-            <ul className={styles.list}>
-              {competences.map(({ name }) => <li className={styles.name}>{name}</li>)}
-            </ul>
-
-            <ul className={styles.list}>
-              {competences.map(({ points }) => (
-                <li className={styles.points}>
-                  <span className={styles.full}>
-                    {Array.from({ length: points }).map(() => <FontAwesomeIcon icon={faSquare} />)}
-                  </span>
-
-                  <span className={styles.empty}>
-                    {5 - points > 0
+                <span className={styles.empty}>
+                  {5 - points > 0
                       && Array.from({ length: 5 - points }).map(() => (
                         <FontAwesomeIcon icon={faSquare} />
                       ))}
-                  </span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </section>
-      </main>
-
-      <Footer />
+                </span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
     </>
   );
 }
