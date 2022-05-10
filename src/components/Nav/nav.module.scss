@@ -26,3 +26,9 @@
     }
   }
 }
+
+@media only screen and (min-width: 1024px) {
+  .aside {
+    display: none;
+  }
+}

@@ -17,7 +17,7 @@ export default function App(): ReactElement {
       <div id={styles.body}>
         <Header />
 
-        <main>
+        <main id={styles.main}>
           <Nav />
 
           <Routes>

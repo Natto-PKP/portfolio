@@ -34,6 +34,10 @@
             color: #f3f6f4;
           }
         }
+
+        .date {
+          display: none;
+        }
       }
 
       .description {
@@ -59,6 +63,86 @@
         text-align: right;
         font-size: 0.7rem;
         color: rgb(100, 100, 100);
+      }
+
+      .buttons {
+        display: none;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .projects {
+    max-width: 1024px;
+    margin: 5rem auto 0;
+
+    .list {
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
+
+      .project {
+        width: 20rem;
+        justify-content: space-between;
+
+        .header {
+          .name {
+            font-size: 1.6rem;
+          }
+
+          .buttons {
+            display: none;
+          }
+
+          .date {
+            display: block;
+          }
+        }
+
+        .description {
+          font-size: 1.1rem;
+        }
+
+        .tags {
+          .tag__icon {
+            width: 2rem;
+          }
+        }
+
+        .date {
+          display: none;
+        }
+
+        .buttons {
+          display: flex;
+          justify-content: center;
+          gap: 1rem;
+          font-size: 1.4rem;
+
+          .button {
+            display: flex;
+            justify-content: center;
+            gap: 0.4rem;
+            padding: 0.2rem 0.4rem;
+            border-radius: 2px;
+            background-color: #e06666;
+            border: 1px solid #e06666;
+            text-decoration: none;
+            color: black;
+
+            transition: 0.2s ease-out;
+
+            &:hover {
+              background-color: transparent;
+              color: #e06666;
+            }
+
+            .name {
+              font-size: 1.2rem;
+            }
+          }
+        }
       }
     }
   }

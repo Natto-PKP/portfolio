@@ -96,6 +96,8 @@ export default function Projects(): ReactElement {
                   </a>
                   )}
                 </div>
+
+                <span className={styles.date}>{`${project.start} - ${project.end}`}</span>
               </header>
 
               <p className={styles.description}>{project.description}</p>
@@ -110,6 +112,21 @@ export default function Projects(): ReactElement {
               </ul>
 
               <span className={styles.date}>{`${project.start} - ${project.end}`}</span>
+
+              <div className={styles.buttons}>
+                {project.npm && (
+                  <a className={styles.button} target="_blank" href={project.npm} rel="noreferrer">
+                    <FontAwesomeIcon icon={faNpm} />
+                  </a>
+                )}
+
+                {project.git && (
+                  <a className={styles.button} target="_blank" href={project.git} rel="noreferrer">
+                    <FontAwesomeIcon icon={faGithub} />
+                    <span className={styles.name}>Github</span>
+                  </a>
+                )}
+              </div>
             </li>
           );
         })}

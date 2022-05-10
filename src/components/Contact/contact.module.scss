@@ -1,4 +1,5 @@
 .contact {
+  margin: auto;
   padding: 4rem 1rem;
 
   .list {
@@ -10,9 +11,9 @@
     .item {
       .link {
         display: flex;
-        gap: 0.4rem;
+        gap: 1rem;
         align-items: center;
-        font-size: 1.6rem;
+        font-size: 2.6rem;
         color: #e06666;
         text-decoration: none;
 

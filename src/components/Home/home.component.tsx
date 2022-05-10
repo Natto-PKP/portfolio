@@ -21,7 +21,7 @@ const competences = [
 
 export default function Home(): ReactElement {
   return (
-    <>
+    <section className={styles.board}>
       <section className={styles.about}>
         <h2 className={styles.title}>Wilfried Mainvielle</h2>
 
@@ -59,6 +59,6 @@ export default function Home(): ReactElement {
           </ul>
         </div>
       </section>
-    </>
+    </section>
   );
 }
