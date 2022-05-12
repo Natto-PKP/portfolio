@@ -10,4 +10,4 @@ services:
              npm run build && 
              npx serve -s build"
     ports:
-      - '3000:9999'
+      - '9999:3000'
