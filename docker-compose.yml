@@ -2,9 +2,14 @@ version: '2'
 services:
   web:
     image: node:16-alpine
+
+    container_name: portfolio
     working_dir: /home/ubuntu/portfolio
+
     volumes:
       - .:/home/ubuntu/portfolio
-    command: sh -c "npm i && npm run build && npx serve -s build"
+
     ports:
       - '9001:3000'
+
+    command: sh -c "npm i && npm run build && npx serve -s build"
