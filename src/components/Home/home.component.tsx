@@ -6,17 +6,18 @@ import type { ReactElement } from 'react';
 import styles from './home.module.scss';
 
 const competences = [
+  { name: 'HTML', points: 4 },
+  { name: 'CSS', points: 4 },
   { name: 'Node.js', points: 4 },
   { name: 'Javascript', points: 4 },
   { name: 'Typescript', points: 4 },
   { name: 'React', points: 3 },
   { name: 'Express', points: 4 },
-  { name: 'Docker', points: 2 },
   { name: 'Jest', points: 3 },
-  { name: 'Nginx', points: 2 },
   { name: 'SQL', points: 4 },
-  { name: 'NoSQL', points: 3 },
-  { name: 'HTML / CSS', points: 4 },
+  { name: 'MongoDB', points: 3 },
+  { name: 'Docker', points: 3 },
+  { name: 'Nginx', points: 2 },
 ];
 
 export default function Home(): ReactElement {
@@ -26,7 +27,7 @@ export default function Home(): ReactElement {
         <h2 className={styles.title}>Wilfried Mainvielle</h2>
 
         <p className={styles.description}>
-          Nouveau développeur web spécialisé dans les technologies Node.js,
+          Jeune développeur web spécialisé dans les technologies Node.js,
           je porte un grand intérêt à la propreté, la clareté et l&apos;optimisation
           de mes projets. J&apos;aime apprendre de nouvelles technos et nouvelles
           façons de faire.
