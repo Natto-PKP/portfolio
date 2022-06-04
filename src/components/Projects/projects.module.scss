@@ -105,8 +105,26 @@
         }
 
         .tags {
-          .tag__icon {
-            width: 2rem;
+          .tag {
+            .tag__icon {
+              width: 2rem;
+            }
+
+            .tag__name {
+              position: absolute;
+              padding: 0.2rem;
+              background-color: #f3f6f4;
+              border-radius: 4px;
+              font-size: 0.8rem;
+
+              transition: 0.2s ease-out;
+            }
+
+            &:hover {
+              .tag__name {
+                display: block;
+              }
+            }
           }
         }
 
