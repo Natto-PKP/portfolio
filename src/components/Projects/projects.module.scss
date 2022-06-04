@@ -83,7 +83,7 @@
       flex-wrap: wrap;
 
       .project {
-        width: 20rem;
+        width: 25rem;
         justify-content: space-between;
 
         .header {
@@ -116,7 +116,7 @@
 
         .buttons {
           display: flex;
-          justify-content: center;
+          justify-content: flex-end;
           gap: 1rem;
           font-size: 1.4rem;
 
