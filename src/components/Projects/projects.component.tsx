@@ -42,7 +42,7 @@ const projects = [
   },
   {
     name: 'tiny-seeder',
-    description: 'Package node qui permet de remplir vos bases de données avec des fausses données',
+    description: 'Package node qui permet de remplir vos bases de données avec de fausses données',
     tags: ['git', 'node.js', 'typescript', 'eslint'],
     start: '29/01/2022',
     end: '01/03/2022',
@@ -51,7 +51,7 @@ const projects = [
   },
   {
     name: 'discord-sucrose',
-    description: 'Structure et fonctions utile pour créer facilement un bot Discord',
+    description: 'Structure et fonctions utiles pour créer facilement un bot Discord',
     tags: ['git', 'node.js', 'typescript', 'eslint'],
     start: '22/11/2021',
     end: '02/03/2022',
@@ -60,7 +60,7 @@ const projects = [
   },
   {
     name: 'Sophie',
-    description: 'Bot discord multi tâches',
+    description: 'Bot discord multi-tâches',
     tags: ['git', 'node.js', 'typescript', 'postgresql', 'eslint'],
     start: '13/10/2021',
     end: '???',
