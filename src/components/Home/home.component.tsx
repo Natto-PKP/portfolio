@@ -39,20 +39,20 @@ export default function Home(): ReactElement {
 
         <div className={styles.table}>
           <ul className={styles.list}>
-            {competences.map(({ name }) => <li className={styles.name}>{name}</li>)}
+            {competences.map(({ name }) => <li key={name} className={styles.name}>{name}</li>)}
           </ul>
 
           <ul className={styles.list}>
-            {competences.map(({ points }) => (
-              <li className={styles.points}>
+            {competences.map(({ name, points }) => (
+              <li key={name} className={styles.points}>
                 <span className={styles.full}>
-                  {Array.from({ length: points }).map(() => <FontAwesomeIcon icon={faSquare} />)}
+                  {Array.from({ length: points }).map((_, i) => <FontAwesomeIcon key={`square_${i + 1}`} icon={faSquare} />)}
                 </span>
 
                 <span className={styles.empty}>
                   {5 - points > 0
-                      && Array.from({ length: 5 - points }).map(() => (
-                        <FontAwesomeIcon icon={faSquare} />
+                      && Array.from({ length: 5 - points }).map((_, i) => (
+                        <FontAwesomeIcon key={`square_${i + 1}`} icon={faSquare} />
                       ))}
                 </span>
               </li>

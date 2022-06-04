@@ -5,11 +5,11 @@ import type { ReactElement } from 'react';
 import Home from './Home/home.component';
 import Projects from './Projects/projects.component';
 import Contact from './Contact/contact.component';
-
-import styles from './app.module.scss';
 import Header from './Header/header.component';
 import Nav from './Nav/nav.component';
 import Footer from './Footer/footer.component';
+
+import styles from './app.module.scss';
 
 export default function App(): ReactElement {
   return (

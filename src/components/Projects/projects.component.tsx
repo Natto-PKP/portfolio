@@ -79,7 +79,7 @@ export default function Projects(): ReactElement {
           });
 
           return (
-            <li className={styles.project}>
+            <li key={project.name} className={styles.project}>
               <header className={styles.header}>
                 <h2 className={styles.name}>{project.name}</h2>
 
