@@ -15,6 +15,8 @@ export default function App(): ReactElement {
   return (
     <BrowserRouter>
       <div id={styles.body}>
+        <div id={styles.background} />
+
         <Header />
 
         <main id={styles.main}>
